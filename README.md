@@ -18,7 +18,7 @@ When an audio CD is inserted in the drive, moOde playback stops, the moOde queue
 
 ## Responsiveness
 
-An optical CD drive is very slow compared to other storage devices. Then, too, nature of the CDDA (compact disk digital audio) encoding complicates finding and extracting an audio track from the CD. In addition, there is internal buffering involved.
+An optical CD drive is very slow compared to other storage devices. Then, too, the nature of the CDDA (compact disk digital audio) encoding complicates retrieving audio tracks from the CD. In addition, there is internal buffering involved.
 
 Some sample timings (expect variability):
 
@@ -51,10 +51,7 @@ The simplest method of installation is to click the green github "Clone or downl
 2. On the target moOde player, go to the /home/pi directory and unzip the file
 3. Change to the /home/pi/moOdeCDPlayer-master directory which has been created
 4. Execute the command
-```
-/bin/bash install.sh
-```
-Alternatively, mark the script executable and...well...you know the drill
+`/bin/bash install.sh` or, alternatively, mark the script executable and...well...you know the drill
 
 5. Once the script finishes successfully, you should reboot. At this point the moOde CD playback function should be working and you can delete both moOdeCDPlay-master.zip and the moOdeCDPlay-master directory.
 
