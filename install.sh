@@ -5,6 +5,7 @@ if [ ! -f /var/www/command/moode.php ]; then
     echo "In case you didn't notice, this doesn't look like a moOde installation."
     exit 1
 fi
+sudo apt-get install cdparanoia
 sudo cp addaudiocd.sh /usr/local/bin/addaudiocd.sh
 sudo cp remaudiocd.sh /usr/local/bin/remaudiocd.sh
 sudo cp addaudiocd.service /etc/systemd/system/addaudiocd.service
