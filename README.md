@@ -20,14 +20,16 @@ When an audio CD is inserted in the drive, moOde playback stops, the moOde queue
 
 An optical CD drive is very slow compared to other storage devices. The nature of the CDDA (compact disk digital audio) encoding further complicates finding and extracting an audio track from the CD. In addition, there is internal buffering involved.
 
-Some sample timings:
+Some sample timings (expect variability):
 
 - Load a CD and display the track list: 12s
 - Select track 1 and begin playing: 14s
 - Change from track to track: 3s
-- Return to track 1 from track 7: 14s
+- Return to track 1 from track 7: 10s
 
-Moving backwards and forwards within a track also takes time, and the moOde time dial has to catch up.
+Moving backwards and forwards within a track also takes time.
+
+The moOde time dial reading is suspect while these actions are occurring.
 
 Once extracted, on the other hand, an audio CD track is played back at 44.1KHz/16bit just as if it were decoded from, say, a FLAC-encoded file.
 
@@ -43,9 +45,16 @@ In Version 2 (still a pipe dream), external data services are queried to obtain 
 
 The Version 0 code is contained in two simple scripts, two corresponding systemd services files, and a udev ruleset.
 
-The simplest method of installation is to click the github "Clone or download" button and the click the "Download ZIP" button which appears. The zip file moOdeCDPlay-master.zip will be downloaded to your local host. 
+The simplest method of installation is to click the green github "Clone or download" button and the click the "Download ZIP" button which appears. The zip file moOdeCDPlay-master.zip offered for download to your local host. 
 
 1. Copy this file to the /home/pi directory in the target moOde player
 2. On the target moOde player, go to the /home/pi directory and unzip the file
 3. Change to the /home/pi/moOdeCDPlayer-master directory which has been created
-4. Mark the install.sh executable and invoke it
+4. Execute the command
+```
+/bin/bash install.sh
+```
+Alternatively, mark the script executable and...well...you know the drill
+5. Once the script finishes successfully, you should reboot. At this point the moOde CD playback function shoulc be working and you can delete moOdeCDPlay-master.zip and the moOdeCDPlay-master directory.
+
+Good listening!
