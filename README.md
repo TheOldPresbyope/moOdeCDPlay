@@ -41,5 +41,5 @@ In Version 2 (still a pipe dream), external data services are queried to obtain 
 
 ## Installation
 
-The Version 0 code is contained in two simple scripts, a udev ruleset, and a systemd service file.
+The Version 0 code is contained in two simple scripts, two corresponding systemd services files, and a udev ruleset.
 
