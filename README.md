@@ -6,7 +6,7 @@ The code assumes that a CD drive suitable for audio playback is already connecte
  
 ## History
 
-This work began as a contribution to the moOde project from Ashley Cox, communicated in email correspondence in July 2019 with Tim Curtis and Kent Reed (TheOldPresbyope). That contribution subsequently has been modified and extended by Kent Reed. In his emails, Cox granted the moOde project full permission to use his contribution. An MIT license has been used in this repo explicitly to grant this permission by both authors to all users. It is believed to be compatible with the GPL license used in the moOde codebase.
+This work began as a contribution to the moOde project from Ashley Cox, communicated in email correspondence in the summer of 2019 with Tim Curtis and Kent Reed (TheOldPresbyope). That contribution subsequently has been modified and extended by Kent Reed. In his emails, Cox granted the moOde project full permission to use his contribution. An MIT license has been used in this repo to grant explicitly this permission by both authors to all users. It is believed to be compatible with the GPL license used in the moOde codebase.
 
 Similar work is described in https://github.com/TongboZhang/Moode_Extension. See additional links there.
 
@@ -18,7 +18,7 @@ When an audio CD is inserted in the drive, moOde playback stops, the moOde queue
 
 ## Responsiveness
 
-An optical CD drive is very slow compared to other storage devices. The nature of the CDDA (compact disk digital audio) encoding further complicates finding and extracting an audio track from the CD.
+An optical CD drive is very slow compared to other storage devices. The nature of the CDDA (compact disk digital audio) encoding further complicates finding and extracting an audio track from the CD. In addition, there is internal buffering involved.
 
 Some sample timings:
 
@@ -29,7 +29,7 @@ Some sample timings:
 
 Moving backwards and forwards within a track also takes time, and the moOde time dial has to catch up.
 
-Once extracted, of course, an audio CD track is played back at 44.1KHz/16bit just as if it were decoded from, say, a FLAC-encoded file.
+Once extracted, on the other hand, an audio CD track is played back at 44.1KHz/16bit just as if it were decoded from, say, a FLAC-encoded file.
 
 ## Planned Evolution of Releases
 
