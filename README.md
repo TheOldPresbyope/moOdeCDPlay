@@ -43,7 +43,7 @@ In Version 2 (still a pipe dream), external data services are queried to obtain 
 
 ## Installation
 
-The Version 0 code is contained in two simple scripts, two corresponding systemd services files, and a udev ruleset.
+The Version 0 code is contained in two simple scripts, two corresponding systemd service files, and a udev ruleset.
 
 The simplest method of installation is to click the green github "Clone or download" button and then click the "Download ZIP" button which appears. The zip file moOdeCDPlay-master.zip will be offered for download to your local host. 
 
