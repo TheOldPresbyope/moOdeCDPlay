@@ -2,7 +2,7 @@ echo "Install moOdeCDPlay files in moOde."
 if [ ! -f /var/www/command/moode.php ]; then
     echo
     echo "I'm sorry, Dave, I'm afraid I can't do that."
-    echo "This doesn't look like a moOde installation."
+    echo "In case you didn't notice, this doesn't look like a moOde installation."
     exit 1
 fi
 sudo cp addaudiocd.sh /usr/local/bin/addaudiocd.sh
