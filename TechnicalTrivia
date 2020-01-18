@@ -1,0 +1,41 @@
+This code depends on udev, the Linux subsystem for managing device events. 
+(https://wiki.debian.org/udev and https://wiki.archlinux.org/index.php/Udev 
+are useful references.)
+
+When a USB CD drive is plugged in, the Raspbian kernel and its baseline 
+udev rules identify it as a CD drive. Normally, it is enumerated in the 
+device tree as /dev/sr0 but occasionally it shows up as /dev/sr1. By default, 
+the device's permissions are brw-rw----. For convenience, a symbolic link 
+to it, /dev/cdrom (and also /dev/cdrw if it's capable of writing), is created 
+by udev. A variety of attributes and environment variables pertaining to the 
+device are maintained in the udev database. The udevadm tool is convenient 
+for exploring these attributes and variable as they change with device events.
+
+Many online articles on writing udev rules show introductory examples using 
+the actions "add" and "remove". These actions apply to the drive itself and 
+not to the removable media. Only the "change" action is appropriate for 
+detecting the insertion and ejection of a compact disc.
+
+The ruleset written for this code takes advantage of two udev environment 
+variables. 
+
+When, specifically an audio disc is inserted, the udev environment variable 
+ID_CDROM_MEDIA_TRACK_COUNT_AUDIO is created with a value equal to the number 
+of tracks found on the disc. The ruleset triggers on the existence of this 
+variable (its value is not used) to signal systemd to invoke the 
+addaudiocd.sh script.
+
+When the disc is ejected using the drive's manual eject button, the udev 
+environment variable DISK_EJECT_REQUEST is created with a value equal to 1. 
+The ruleset triggers on the existence of this variable and its value to 
+signal systemd to invoke the remaudiocd.sh script.
+
+The addaudiocd.sh script marks the CD drive as readable by all, determines
+again the number of audio tracks on the CD (yes, udev already knows; with
+further work the count could be passed through systemd to the script),
+and creates the track list in the moOde queue.
+
+The remaudiocd.sh script clears the moOde queue and ejects the disc. Note
+that using the drive's manual eject button triggers ejection anyway, but
+it's included here so remaudiocd.sh can be used as a general utility script.
+Think "eject CD" on a remote control or in the moOdeUI.
