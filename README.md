@@ -56,3 +56,19 @@ The simplest method of installation is to click the green github "Clone or downl
 5. Once the script finishes successfully, you should reboot. At this point the moOde CD playback function should be working and you can delete both moOdeCDPlay-master.zip and the moOdeCDPlay-master directory.
 
 Good listening!
+
+## Odds and Ends
+
+### Hardware
+
+This code was developed on the following system
+- moOde 6.4.0
+- RPi4B
+- LG "Slim Portable DVD Writer" model GP65NB60 [purchased new on-line for under US$30]
+- Canakit 5v/3.0a Raspberry Pi AC adapter with USB-C ouput
+
+A powered USB hub did not seem to be necessary with this hardware combination, but it may be necessary with more peripherals attached, with other optical-drive models, or with other RPi models.
+
+### SoX
+
+A problem experienced in early testing with audible dropouts during CD playback was traced to SoX resampling at 32 bit/384KHz (inadvertently left on after a stress test of the RPi4B). Disabling resampling eliminated the dropouts. Your mileage with SoX resampling may vary.
