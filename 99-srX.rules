@@ -1,4 +1,2 @@
-KERNEL=="sr[0-9]", ACTION=="change", ENV{ID_CDROM_MEDIA_TRACK_COUNT_AUDIO}!="", 
-TAG+="systemd", ENV{SYSTEMD_WANTS}="addaudiocd.service"
-KERNEL=="sr[0-9]", ACTION=="change", ENV{DISK_EJECT_REQUEST}=="1", TAG+="systemd
-", ENV{SYSTEMD_WANTS}="remaudiocd.service"
+KERNEL=="sr[0-9]", ACTION=="change", ENV{ID_CDROM_MEDIA_TRACK_COUNT_AUDIO}!="", TAG+="systemd", ENV{SYSTEMD_WANTS}="addaudiocd.service"
+KERNEL=="sr[0-9]", ACTION=="change", ENV{DISK_EJECT_REQUEST}=="1", TAG+="systemd", ENV{SYSTEMD_WANTS}="remaudiocd.service"
