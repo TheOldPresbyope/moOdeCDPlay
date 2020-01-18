@@ -1,6 +1,6 @@
 # moOde CD play
 
-This repo contains code to add a CD playback function to the Raspberry Pi-based moOde music player.
+This repo contains code to add a CD playback function to the Raspberry Pi-based [moOde audio player](http://moodeaudio.org).
 
 The code assumes that a CD drive suitable for audio playback is already connected to the Raspberry Pi hosting the moOde player and is recognized by Raspbian as device /dev/cdrom.
  
