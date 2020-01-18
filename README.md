@@ -6,7 +6,7 @@ The code assumes that a CD drive suitable for audio playback is already connecte
  
 ## History
 
-This work began as a contribution to the moOde project from Ashley Cox, communicated in email correspondence in the summer of 2019 with Tim Curtis and Kent Reed (TheOldPresbyope). That contribution subsequently has been modified and extended by Kent Reed. In his emails, Cox granted the moOde project full permission to use his contribution. An MIT license has been used in this repo to grant explicitly this permission by both authors to all users. It is believed to be compatible with the GPL license used in the moOde codebase.
+This work began as a contribution to the moOde project from Ashley Cox, communicated in email correspondence in the summer of 2019 with Tim Curtis and Kent Reed (TheOldPresbyope). That contribution subsequently has been modified and extended by Kent Reed. In his emails, Cox granted the moOde project full permission to use his contribution. An MIT license is used in this repo to grant explicitly this permission by both authors to all users. It is believed to be compatible with the GPL license used in the moOde codebase.
 
 Similar work is described in https://github.com/TongboZhang/Moode_Extension. See additional links there.
 
@@ -43,3 +43,9 @@ In Version 2 (still a pipe dream), external data services are queried to obtain 
 
 The Version 0 code is contained in two simple scripts, two corresponding systemd services files, and a udev ruleset.
 
+The simplest method of installation is to click the github "Clone or download" button and the click the "Download ZIP" button which appears. The zip file moOdeCDPlay-master.zip will be downloaded to your local host. 
+
+1. Copy this file to the /home/pi directory in the target moOde player
+2. On the target moOde player, go to the /home/pi directory and unzip the file
+3. Change to the /home/pi/moOdeCDPlayer-master directory which has been created
+4. Mark the install.sh executable and invoke it
