@@ -6,7 +6,7 @@ The code assumes that a CD drive suitable for audio playback is already connecte
  
 ## History
 
-This work began as a contribution to the moOde project from Ashley Cox, communicated in email correspondence in the summer of 2019 with Tim Curtis and Kent Reed (TheOldPresbyope). That contribution subsequently has been modified and extended by Kent Reed. In his emails, Cox granted the moOde project full permission to use his contribution. An MIT license is used in this repo to grant explicitly this permission by both authors to all users. It is believed to be compatible with the GPL license used in the moOde codebase.
+]This work began as a contribution to the moOde project from [Ashley Cox](https://ashleycox.co.uk/), communicated in email correspondence in the summer of 2019 with Tim Curtis and Kent Reed (TheOldPresbyope). That contribution subsequently has been modified and extended by Kent Reed. In his emails, Cox granted the moOde project full permission to use his contribution. An MIT license is used in this repo to grant explicitly this permission by both authors to all users. It is believed to be compatible with the GPL license used in the moOde codebase.
 
 Similar work is described in https://github.com/TongboZhang/Moode_Extension. See additional links there.
 
@@ -49,7 +49,7 @@ The simplest method of installation is to click the green github "Clone or downl
 
 1. Download and transfer this file to the /home/pi directory in the target moOde player
 2. On the target moOde player, go to the /home/pi directory and unzip the file
-3. Change to the /home/pi/moOdeCDPlayer-master directory which has been created
+3. Change to the /home/pi/moOdeCDPlay-master directory which has been created
 4. Execute the command
 `/bin/bash install.sh` or, alternatively, mark the script executable and...well...you know the drill
 
@@ -72,3 +72,4 @@ A powered USB hub did not seem to be necessary with this hardware combination, b
 ### SoX
 
 A problem experienced in early testing with audible dropouts during CD playback was traced to SoX resampling at 32 bit/384KHz (inadvertently left on after a stress test of the RPi4B). Disabling resampling eliminated the dropouts. Your mileage with SoX resampling may vary.
+
