@@ -6,7 +6,7 @@ The code assumes that a CD drive suitable for audio playback is already connecte
  
 ## History
 
-This work began as a contribution to the moOde project from Ashley Cox (https://ashleycox.co.uk/), communicated in email correspondence in the summer of 2019 with Tim Curtis and Kent Reed (TheOldPresbyope). That contribution subsequently has been modified and extended by Kent Reed. In his emails, Cox granted the moOde project full permission to use his contribution. An MIT license is used in this repo to grant explicitly this permission by both authors to all users. It is believed to be compatible with the GPL license used in the moOde codebase.
+This work began as a contribution to the moOde project from Ashley Cox (https://ashleycox.co.uk/), communicated in email correspondence in the summer of 2019 with Tim Curtis (moOde maintainer) and Kent Reed (TheOldPresbyope). That contribution subsequently has been modified and extended by Kent Reed. In his emails, Cox granted the moOde project full permission to use his contribution. An MIT license is used in this repo to grant explicitly this permission by both authors to all users. It is believed to be compatible with the GPL license used in the moOde codebase.
 
 Similar work is described in https://github.com/TongboZhang/Moode_Extension. See additional links there.
 
@@ -20,7 +20,7 @@ When an audio CD is inserted in the drive, moOde playback stops, the moOde queue
 
 An optical CD drive is very slow compared to other storage devices. Then, too, the nature of the CDDA (compact disk digital audio) encoding complicates retrieving audio tracks from the CD. In addition, there is internal buffering involved.
 
-Some sample timings (expect variability):
+Some sample timings (expect variations with different hardware):
 
 - Load a CD and display the track list: 12s
 - Select track 1 and begin playing: 14s
@@ -67,7 +67,7 @@ This code was developed on the following system
 - LG "Slim Portable DVD Writer" model GP65NB60 [purchased new on-line for under US$30]
 - Canakit 5v/3.0a Raspberry Pi AC adapter with USB-C ouput
 
-A powered USB hub did not seem to be necessary with this hardware combination, but it may be necessary with more peripherals attached, with other optical-drive models, or with other RPi models.
+A powered USB hub did not seem to be necessary with this hardware combination (no problems loading a CD or starting a track), but it may be necessary with more peripherals attached, with other optical-drive models, or with other RPi models. If in doubt, use a powered hub. 
 
 ### SoX
 
