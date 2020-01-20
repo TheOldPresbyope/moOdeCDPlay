@@ -14,7 +14,8 @@ else
 fi
 
 #get the track count from udev
-tracks=$(udevadm info --query=property /dev/cdrom|sed -n 's/ID_CDROM_MEDIA_TRACK_COUNT_AUDIO=\(.*\)/\1/p')
+tracks=$(udevadm info --query=property /dev/cdrom| \
+sed -n 's/ID_CDROM_MEDIA_TRACK_COUNT_AUDIO=\(.*\)/\1/p')
 
 #add each track to mpd queue 
 for ((i=1; i<=$tracks; i++)); do
