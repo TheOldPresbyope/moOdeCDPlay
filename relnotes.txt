@@ -1,0 +1,13 @@
+# Release notes for moOdeCDPlay
+
+# a set of routines which enable moOde
+# to play a music CD
+
+# V0.1 2020-01-21
+# UPD - changed addaudiocd.sh and install.sh
+#       to use track count from udev instead 
+#       of counting tracks with cdparanoia, 
+#       eliminating need to install cdparanoia
+
+# V0 2020-01-18
+# Initial release: Basic functionality
