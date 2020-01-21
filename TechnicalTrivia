@@ -1,3 +1,5 @@
+V0.1, 2020-01-21
+
 This code depends on udev, the Linux subsystem for managing device events. 
 (https://wiki.debian.org/udev and https://wiki.archlinux.org/index.php/Udev 
 are useful references.)
@@ -30,10 +32,9 @@ environment variable DISK_EJECT_REQUEST is created with a value equal to 1.
 The ruleset triggers on the existence of this variable and its value to 
 signal systemd to invoke the remaudiocd.sh script.
 
-The addaudiocd.sh script marks the CD drive as readable by all, determines
-again the number of audio tracks on the CD (yes, udev already knows; with
-further work the count could be passed through systemd to the script),
-and creates the track list in the moOde queue.
+The addaudiocd.sh script marks the CD drive as readable by all (may be 
+redundant if the drive has already been used), gets the audio track count
+from the udev database,and creates the track list in the moOde queue.
 
 The remaudiocd.sh script clears the moOde queue and ejects the disc. Note
 that using the drive's manual eject button triggers ejection anyway, but
