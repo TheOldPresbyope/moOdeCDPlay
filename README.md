@@ -14,7 +14,7 @@ Similar work is described in https://github.com/TongboZhang/Moode_Extension. See
 
 We intend the moOde CD playback function to mimic the behavior of a standalone CD player.
 
-When an audio CD is inserted in the drive, moOde playback stops, the moOde queue is cleared and then loaded with a track list corresponding to the audio tracks on the CD. The user can play the tracks in the normal way. When the CD is ejected, playback stops and the queue is cleared. In particular, moOde retains no memory of the CD or its tracks. Saving a track as a favorite or setting it for clock radio will lead to an error later when moOde attempts to play it.
+When an audio CD is inserted in the drive, moOde playback stops, the moOde queue is cleared and then loaded with a track list corresponding to the audio tracks on the CD. The user can play the tracks in the normal way. When the CD is ejected, using the manual eject button on the drive, playback stops and the queue is cleared. In particular, moOde retains no memory of the CD or its tracks. Saving a track as a favorite or setting it for clock radio will lead to an error later when moOde attempts to play it.
 
 ## Responsiveness
 
