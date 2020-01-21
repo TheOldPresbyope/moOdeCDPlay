@@ -1,7 +1,9 @@
 #!/bin/bash
+# moOdeCDPlay V0.1 script
+
 #clear the queue
 /usr/bin/mpc -q clear
-# make drive readable
+# make drive readable, just in case
 # (allow for odd enumeration)
 if [ -b /dev/sr0 ]; then
    chmod 644 /dev/sr0
@@ -11,10 +13,9 @@ else
   exit 1
 fi
 
-#count the tracks
-# (Yes, udev already knows the count, but getting 
-# to its list of environment variables seems a hack.)
-tracks=$(/usr/bin/cdparanoia -sQ |& grep -P "^\s+\d+\." | wc -l)
+#get the track count from udev
+tracks=$(udevadm info --query=property /dev/cdrom | \
+sed -n 's/ID_CDROM_MEDIA_TRACK_COUNT_AUDIO=\(.*\)/\1/p')
 
 #add each track to mpd queue 
 for ((i=1; i<=$tracks; i++)); do
