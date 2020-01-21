@@ -1,11 +1,11 @@
 echo "Install V0 moOdeCDPlay files in moOde."
+# moOdeCDPlay V0.1 script
 if [ ! -f /var/www/command/moode.php ]; then
     echo
     echo "I'm sorry, Dave, I'm afraid I can't do that."
     echo "In case you didn't notice, this doesn't look like a moOde installation."
     exit 1
 fi
-sudo apt-get install  -y cdparanoia
 sudo cp addaudiocd.sh /usr/local/bin/addaudiocd.sh
 sudo cp remaudiocd.sh /usr/local/bin/remaudiocd.sh
 sudo cp addaudiocd.service /etc/systemd/system/addaudiocd.service
