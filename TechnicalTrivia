@@ -34,7 +34,7 @@ signal systemd to invoke the remaudiocd.sh script.
 
 The addaudiocd.sh script marks the CD drive as readable by all (may be 
 redundant if the drive has already been used), gets the audio track count
-from the udev database,and creates the track list in the moOde queue.
+from the udev database, and creates the track list in the moOde queue.
 
 The remaudiocd.sh script clears the moOde queue and ejects the disc. Note
 that using the drive's manual eject button triggers ejection anyway, but
