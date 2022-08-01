@@ -1,6 +1,7 @@
 echo "Install V0 moOdeCDPlay files in moOde."
-# moOdeCDPlay V0.2 script
-# assume user knows what they're doing and don't check we're installing on a moOde player
+# moOdeCDPlay V0.1 script
+# install script revised to remove a sanity check and just
+# assume user knows what they're doing
 sudo cp addaudiocd.sh /usr/local/bin/addaudiocd.sh
 sudo cp remaudiocd.sh /usr/local/bin/remaudiocd.sh
 sudo cp addaudiocd.service /etc/systemd/system/addaudiocd.service
