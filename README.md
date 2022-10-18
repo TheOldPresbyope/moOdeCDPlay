@@ -6,7 +6,9 @@ The code assumes that a CD drive suitable for audio playback is already connecte
 
 ## Status
 
-No substantive work has been done since Version 1 was fielded in 2020.
+No substantive work has been done since Version ~~1~~ 0 was fielded in 2020. This README has been updated to reflect this.
+
+Minor updates in 2022/10 make the install script compatible with moOde 8.x as well as previous moOde releases. As well, a minor harmless bug in the unit service files has been fixed.
 
 ## History
 
@@ -37,7 +39,7 @@ The moOde time dial reading is suspect while these actions are occurring.
 
 Once extracted, on the other hand, an audio CD track is played back at 44.1KHz/16bit just as if it were decoded from, say, a FLAC-encoded file.
 
-## Planned Evolution of Releases
+## ~~Planned~~ Possible Evolution of Releases
 
 In Version 0 (the current release), the CD track list consists of primitive "cdda:///1", cdda:///2", etc., entries. The default moOde logo is displayed for all tracks, and, for each track played, the information displayed below the logo is an ugly "File does not exist" and "Unknown artist - Unknown album"
 
@@ -66,7 +68,7 @@ Good listening!
 ### Hardware
 
 This code was developed on the following system
-- moOde 6.4.0
+- moOde 6.4.0 (and, most recently, tested on a moOde 8.2.1 player)
 - RPi4B
 - LG "Slim Portable DVD Writer" model GP65NB60 [purchased new on-line for under US$30]
 - Canakit 5v/3.0a Raspberry Pi AC adapter with USB-C ouput
