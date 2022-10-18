@@ -1,4 +1,4 @@
-[UNIT]
+[Unit]
 Description=audio cd ejection
 
 [Service]
