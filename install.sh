@@ -1,6 +1,6 @@
 echo "Install V0 moOdeCDPlay files in moOde."
 # moOdeCDPlay V0.1 script
-if [ ! -f /var/www/command/moode.php ]; then
+if [[ ! -f /var/www/command/moode.php ]] && [[ ! -f /var/www/daemon/worker.php ]]; then
     echo
     echo "I'm sorry, Dave, I'm afraid I can't do that."
     echo "In case you didn't notice, this doesn't look like a moOde installation."
